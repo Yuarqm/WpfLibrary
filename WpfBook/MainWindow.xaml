@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListView x:Name="BooksList" Margin="10,10,10,175" >
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="Название книги" DisplayMemberBinding="{Binding [0]}" Width="150"/>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding [1]}" Width="150"/>
+                    <GridViewColumn Header="Год выпуска" DisplayMemberBinding="{Binding [2]}" Width="150"/>
+                    <GridViewColumn Header="Жанр" DisplayMemberBinding="{Binding [3]}" Width="150"/>
+                    <GridViewColumn Header="Кол-во страниц" DisplayMemberBinding="{Binding [4]}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="GoToAddBook" Content="Добавить книгу" HorizontalAlignment="Left" Margin="29,293,0,0" VerticalAlignment="Top" Height="56" Width="120" Click="GoToAddBook_Click"/>
+        <Button x:Name="GoToEditBook" Content="Редактировать книгу" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" Height="56" Width="120" Click="GoToEditBook_Click"/>
+        <Button x:Name="RemoveBook" Content="Удалить книгу" HorizontalAlignment="Left" Margin="649,293,0,0" VerticalAlignment="Top" Height="56" Width="120" Click="RemoveBook_Click"/>
+
+
+    </Grid>
+</Window>
